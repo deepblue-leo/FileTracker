@@ -1,0 +1,47 @@
+﻿<Window x:Class="FileTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileTracker"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        Title="FileTracker" Height="600" Width="976.243">
+    <Grid>
+        <Button Content="选择主文件" HorizontalAlignment="Left" Margin="38,36,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="130,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="332"/>
+        <Label Content="主文件索引列" HorizontalAlignment="Left" Margin="38,81,0,0" VerticalAlignment="Top"/>
+        <ListBox HorizontalAlignment="Left" Height="161" Margin="221,248,0,0" VerticalAlignment="Top" Width="164"/>
+        <ComboBox HorizontalAlignment="Left" Margin="221,85,0,0" VerticalAlignment="Top" Width="164"/>
+        <Label Content="主文件索引列内容筛选条件" HorizontalAlignment="Left" Margin="38,122,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="MasterFileIndexFilterTxt" HorizontalAlignment="Left" Height="23" Margin="221,126,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="195"/>
+        <Label Content="主文件显示列" HorizontalAlignment="Left" Margin="38,178,0,0" VerticalAlignment="Top"/>
+        <Button Content="选择从文件" HorizontalAlignment="Left" Margin="525,36,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="616,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="332"/>
+        <Grid>
+            <Button Name="MasterFileOpenBtn" Content="选择主文件" HorizontalAlignment="Left" Margin="38,36,0,0" VerticalAlignment="Top" Width="75" Click="MasterFileOpenBtn_Click"/>
+            <TextBox Name="MasterFilePathTxt" HorizontalAlignment="Left" Height="23" Margin="130,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="332"/>
+            <ListBox Name="MasterFileDisplayColumn" HorizontalAlignment="Left" Height="226" Margin="221,183,0,0" VerticalAlignment="Top" Width="164" SelectionMode="Multiple"/>
+            <ComboBox Name="MasterFileIndexColumn" HorizontalAlignment="Left" Margin="221,85,0,0" VerticalAlignment="Top" Width="164" SelectionChanged="MasterFileIndexColumn_SelectionChanged"/>
+            <Label Content="从文件关联列" HorizontalAlignment="Left" Margin="525,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.218,0.732"/>
+            <Label Content="从文件关联列内容筛选条件" HorizontalAlignment="Left" Margin="525,122,0,0" VerticalAlignment="Top"/>
+            <Label Content="从文件显示列" HorizontalAlignment="Left" Margin="525,177,0,0" VerticalAlignment="Top"/>
+            <Button Name="SlaveFileOpenBtn" Content="选择从文件" HorizontalAlignment="Left" Margin="525,36,0,0" VerticalAlignment="Top" Width="75" Click="SlaveFileOpenBtn_Click"/>
+            <TextBox Name="SlaveFilePathTxt" HorizontalAlignment="Left" Height="23" Margin="616,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="332"/>
+            <ListBox Name="SlaveFileDisplayColumn" HorizontalAlignment="Left" Height="226" Margin="705,183,0,0" VerticalAlignment="Top" Width="164" SelectionMode="Multiple"/>
+            <ComboBox Name="SlaveFileIndexColumn" HorizontalAlignment="Left" Margin="705,85,0,0" VerticalAlignment="Top" Width="164" SelectionChanged="SlaveFileIndexColumn_SelectionChanged"/>
+            <TextBox Name="SlaveFileIndexFilterTxt" HorizontalAlignment="Left" Height="23" Margin="705,126,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="195"/>
+            <Label Content="操作类型" HorizontalAlignment="Left" Margin="38,458,0,0" VerticalAlignment="Top"/>
+            <ComboBox HorizontalAlignment="Left" Margin="115,462,0,0" VerticalAlignment="Top" Width="120" Cursor="None" SelectedIndex="0">
+                <ComboBoxItem Content="生成新文件"/>
+                <ComboBoxItem Content="刷新主文件关联列"/>
+                <ComboBoxItem Content="附加到主文件关联列"/>
+            </ComboBox>
+            <Button Content="开始" HorizontalAlignment="Left" Margin="765,462,0,0" VerticalAlignment="Top" Width="135" Height="51" Click="Button_Click"/>
+            <ProgressBar  Height="20" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
