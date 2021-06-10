@@ -71,5 +71,10 @@ namespace ExcelParser
         /// <param name="rightCornerY"></param>
         /// <returns></returns>
         string[,] GetRangeData(Worksheet ws, int leftCornerRowIndex, int leftCornerColumnIndex, int rightCornerRowIndex, int rightCornerColumnIndex);
+
+        //void CreateNewWorkbook(string newFilePath);
+        //void CopyRowToNewWorkbook(int RowIndexOnOldFile, int RowIndexOnNewFile);
+        //void CopyColumnToNewWorkbook(int ColumnIndexOnOldFile, int ColumnIndexOnNewFile);
+        void CopyRangeToNewWorkbook(string leftUpCornerOnOldFile, string rightDownCornerOnOldFile, string leftUpCornerOnNewFile, string rightDownOnOldFile);        
     }
 }

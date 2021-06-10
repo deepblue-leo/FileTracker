@@ -38,7 +38,7 @@
                 <ComboBoxItem Content="刷新主文件关联列"/>
                 <ComboBoxItem Content="附加到主文件关联列"/>
             </ComboBox>
-            <Button Content="开始" HorizontalAlignment="Left" Margin="765,462,0,0" VerticalAlignment="Top" Width="135" Height="51" Click="Button_Click"/>
+            <Button Name="BtnStart" Content="开始" HorizontalAlignment="Left" Margin="765,462,0,0" VerticalAlignment="Top" Width="135" Height="51" Click="BtnStart_Click"/>
             <ProgressBar  Height="20" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
 
         </Grid>

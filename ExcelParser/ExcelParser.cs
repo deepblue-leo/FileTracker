@@ -14,6 +14,12 @@ namespace ExcelParser
     {
         public Workbook WorkBook = null;
 
+        public void CopyRangeToNewWorkbook(Worksheet oldWs, Worksheet newWs, string leftUpCornerOnOldFile, string rightDownCornerOnOldFile, string leftUpCornerOnNewFile, string rightDownOnOldFile)
+        {
+            CellRange range = ;
+
+        }
+
         public int GetColumnCount(Worksheet ws)
         {
             return ws.LastColumn + 1;
